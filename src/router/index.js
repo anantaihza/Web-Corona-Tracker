@@ -28,8 +28,8 @@ const routes = [
     name: 'DataProvinsi',
     component: DataProvinsi
   }
-  
-  
+
+
 ]
 
 const router = new VueRouter({
