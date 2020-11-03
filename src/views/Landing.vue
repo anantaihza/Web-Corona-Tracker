@@ -1,6 +1,6 @@
 <template>
   <div id="lan">
-    <h1>fd</h1>  
+    <h1>Beranda</h1>  
   </div>
 </template>
 

@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Landing from '../views/Landing.vue'
-import AboutUs from '../views/AboutUs.vue'
+import About from '../views/About.vue'
+import DataIndonesia from '../views/DataIndonesia.vue'
+import DataProvinsi from '../views/DataProvinsi.vue'
 
 Vue.use(VueRouter)
 
@@ -12,9 +14,19 @@ const routes = [
     component: Landing
   },
   {
-    path: '/about-us',
-    name: 'AboutUs',
-    component: AboutUs
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/data-indonesia',
+    name: 'DataIndonesia',
+    component: DataIndonesia
+  },
+  {
+    path: '/data-provinsi',
+    name: 'DataProvinsi',
+    component: DataProvinsi
   }
   
   
