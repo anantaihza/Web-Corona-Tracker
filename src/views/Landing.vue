@@ -47,7 +47,7 @@
     <section class="jelajah-data py-5">
       <!-- yang card  -->
       <b-container>
-        <h1 class="text-center">Jelajahi Data Covid-19 Teraktual</h1>
+        <h1 class="text-center" style="color: white;">Jelajahi Data Covid-19 Teraktual</h1>
         <div>
           <b-card-group deck>
             <b-card
@@ -77,13 +77,59 @@
         </div>
       </b-container>
     </section>
-    <section class="cegah-covid">
+    <section class="cegah-covid py-5">
       <!-- tulis beberapa pencegahan nya -->
+      <b-container>
+        <h1 class="text-center">Upaya</h1>
+        <b-row>
+          <b-col lg="4" class="pt-4">
+            <b-card class="compt" title="Title">
+              <b-card-text>
+                This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.
+              </b-card-text>
+            </b-card>
+          </b-col>
+          <b-col lg="8" class="pt-4">
+            <b-card class="compt" title="Title">
+              <b-card-text>
+                This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.
+              </b-card-text>
+            </b-card>
+          </b-col>
+          <b-col lg="8" class="pt-4">
+            <b-card class="compt" title="Title">
+              <b-card-text>
+                This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.
+              </b-card-text>
+            </b-card>
+          </b-col>
+          <b-col lg="4" class="pt-4">
+            <b-card class="compt" title="Title">
+              <b-card-text>
+                This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.
+              </b-card-text>
+            </b-card>
+          </b-col>
+        </b-row>
+      </b-container>
     </section>
-    <section class="faq">
+    <section class="faq py-5">
       <!-- arahan ke faq -->
+      <b-container>
+        <b-row>
+          <b-col>
+            <h2>Ada Pertanyaan ?</h2>
+            <p>Cari tahu pernyataan yang sering muncul mengenai Covid-19</p>
+            <b-button to="/" class="btn-grad">Lihat FAQ</b-button>
+          </b-col>
+          <b-col></b-col>
+        </b-row>
+      </b-container>
     </section>
-    <section class="footers"></section>
   </div>
 </template>
 
@@ -126,9 +172,17 @@ export default {
 
 <style scoped>
 .intro {
-  background-color: rgb(231, 231, 231);
+  background: #56ccf2;
+  background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  color: white;
+  
 }
-
+.jelajah-data {
+  background: #56ccf2;
+  background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
+}
 .btn-grad {
   background-image: linear-gradient(
     to right,
@@ -146,14 +200,23 @@ export default {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  /* box-shadow: 0 0 20px #eee; */
   border-radius: 4px;
   /* display: block; */
 }
 
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
+}
+.compt {
+  height: 14rem;
+}
+.faq {
+  background: #56ccf2;
+  background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  color: white;
 }
 </style>
