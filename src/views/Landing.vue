@@ -3,82 +3,122 @@
     <section class="intro">
       <b-container>
         <b-row>
-          <b-col md="6" class="px-4 py-5">
-            <h1>INDONESIA TANGGAP</h1>
-            <h1>COVID-19</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis corporis autem voluptatem aliquam enim iste eligendi voluptas hic expedita, fuga ab facilis labore beatae excepturi commodi! Earum dicta fugit quibusdam.</p>
+          <b-col md="5" class="px-4 py-5 m-auto">
+            <h1>INDONESIA TANGGAP <span>COVID-19</span></h1>
+            <p class="pt-3">Wujudkan Indonesia Sehat, Aman dan Produktif. Laporkan dan Konsultasikan ke Tim Kesehatan Jika Anda atau Kerabat Dekat Anda Terindikasi Gejala Covid-19.</p>
           </b-col>
-          <b-col md="6" class="p-5 text-center">Gambar ?</b-col>
+          <b-col md="7" class="p-5 text-center d-none d-sm-block">
+            <img src="@/assets/landing/intro.svg" alt width="130%" />
+          </b-col>
         </b-row>
       </b-container>
     </section>
+
     <section class="data py-5">
       <!-- data indonesia -->
       <b-container>
-        <h1 class="text-center pb-3">Corona Virus Overview</h1>
+        <h2 class="text-center pb-3">Corona Virus Overview</h2>
         <br />
-        <b-row>
-          <b-col lg="6" cl><img src="@/assets/landing/world.svg" alt="" width="100%"></b-col>
-          <b-col lg="6" class="my-auto">
+        <b-row class="py-3">
+          <b-col lg="7" class="m-auto">
+            <img src="@/assets/landing/world.svg" alt width="100%" />
+          </b-col>
+          <b-col lg="5" class="my-auto">
             <b-container>
-              <h1>Indonesia</h1>
-            <hr />
-            <b-row>
-              <b-col>
-                <h5>Positif</h5>
-                <h4>{{ total.positif }}</h4>
-              </b-col>
-              <b-col>
-                <h5>Dirawat</h5>
-                <h4>{{ total.dirawat }}</h4>
-              </b-col>
-              <b-col>
-                <h5>Sembuh</h5>
-                <h4>{{ total.sembuh }}</h4>
-              </b-col>
-              <b-col>
-                <h5>Meninggal</h5>
-                <h4>{{ total.meninggal }}</h4>
-              </b-col>
-            </b-row>
+              <h4 class="my-auto">Global</h4>
+              <hr class="mt-1 mb-2" />
+              <b-row>
+                <b-col cols="6" sm="4" class="py-1">
+                  <p class="my-auto">Positif</p>
+                  <h5>{{ global.TotalConfirmed }}</h5>
+                </b-col>
+                <b-col cols="6" sm="4" class="py-1">
+                  <p class="my-auto">Sembuh</p>
+                  <h5>{{ global.TotalRecovered }}</h5>
+                </b-col>
+                <b-col cols="6" sm="4" class="py-1">
+                  <p class="my-auto">Meninggal</p>
+                  <h5>{{ global.TotalDeaths }}</h5>
+                </b-col>
+              </b-row>
             </b-container>
+            <br>
+            <b-container class="mt-3">
+              <h4>Indonesia</h4>
+              <hr class="mt-1 mb-2" />
+              <b-row>
+                <b-col cols="6" sm="3" class="py-1">
+                  <p class="my-auto">Positif</p>
+                  <h5>{{ total.positif }}</h5>
+                </b-col>
+                <b-col cols="6" sm="3" class="py-1">
+                  <p class="my-auto">Dirawat</p>
+                  <h5>{{ total.dirawat }}</h5>
+                </b-col>
+                <b-col cols="6" sm="3" class="py-1">
+                  <p class="my-auto">Sembuh</p>
+                  <h5>{{ total.sembuh }}</h5>
+                </b-col>
+                <b-col cols="6" sm="3" class="py-1">
+                  <p class="my-auto">Meninggal</p>
+                  <h5>{{ total.meninggal }}</h5>
+                </b-col>
+              </b-row>
+            </b-container>
+
           </b-col>
         </b-row>
       </b-container>
     </section>
+
     <section class="jelajah-data py-5">
       <!-- yang card  -->
       <b-container>
-        <h1 class="text-center pb-3" style="color: white;">Jelajahi Data Covid-19 Teraktual</h1>
-        <br>
-        <div class="conten">
+        <h2 class="text-center pb-3" style="color: white;">Jelajahi Data Covid-19 Teraktual</h2>
+        <div class="conten py-5">
           <b-card-group deck class="group-card">
             <b-card border-variant="white" class="card-style">
               <b-card-text>
-                <h5>Data</h5>
-                <h3>Indonesia</h3>
-                <b-button to="/data-indonesia" class="btn-grad">Lihat</b-button>
+                <b-container class="py-2">
+                  <h5>Data</h5>
+                  <h3>Indonesia</h3>
+                  <div class="text-center py-4">
+                    <img src="@/assets/landing/dataindo.svg" alt width="70%" />
+                  </div>
+                  <br />
+                  <b-button to="/data-indonesia" class="btn-grad">Lihat</b-button>
+                </b-container>
               </b-card-text>
             </b-card>
             <b-card border-variant="white" class="card-style">
               <b-card-text>
-                <h5>Data</h5>
-                <h3>Provinsi Indonesia</h3>
-                <b-button to="/data-provinsi" class="btn-grad">Lihat</b-button>
+                <b-container class="py-2">
+                  <h5>Data</h5>
+                  <h3>Provinsi</h3>
+                  <div class="text-center py-4">
+                    <img src="@/assets/landing/dataprov.svg" alt width="70%" />
+                  </div>
+                  <br />
+                  <b-button to="/data-provinsi" class="btn-grad">Lihat</b-button>
+                </b-container>
               </b-card-text>
             </b-card>
           </b-card-group>
         </div>
       </b-container>
     </section>
+
     <section class="cegah-covid py-5">
       <!-- tulis beberapa pencegahan nya -->
       <b-container>
-        <h1 class="text-center pb-3">Upaya</h1>
-        <br>
+        <h2 class="text-center pb-3">Protocol Kesehatan yang Harus Dipatuhi</h2>
+        <br />
         <b-row>
           <b-col lg="4" class="group-card pt-4">
-            <b-card class="compt" title="Title" border-variant="white">
+            <b-card class="compt" border-variant="white">
+              <b-card-title>
+                Title
+              </b-card-title>
               <b-card-text>
                 This is a wider card with supporting text below as a natural lead-in to additional content.
                 This content is a little bit longer.
@@ -86,7 +126,10 @@
             </b-card>
           </b-col>
           <b-col lg="8" class="group-card pt-4">
-            <b-card class="compt" title="Title" border-variant="white">
+            <b-card class="compt" border-variant="white">
+              <b-card-title>
+                Title
+              </b-card-title>
               <b-card-text>
                 This is a wider card with supporting text below as a natural lead-in to additional content.
                 This content is a little bit longer.
@@ -94,7 +137,10 @@
             </b-card>
           </b-col>
           <b-col lg="8" class="group-card pt-4">
-            <b-card class="compt" title="Title" border-variant="white">
+            <b-card class="compt"  border-variant="white">
+              <b-card-title>
+                Title
+              </b-card-title>
               <b-card-text>
                 This is a wider card with supporting text below as a natural lead-in to additional content.
                 This content is a little bit longer.
@@ -102,7 +148,10 @@
             </b-card>
           </b-col>
           <b-col lg="4" class="group-card pt-4">
-            <b-card class="compt" title="Title" border-variant="white">
+            <b-card class="compt" border-variant="white">
+              <b-card-title>
+                Title
+              </b-card-title>
               <b-card-text>
                 This is a wider card with supporting text below as a natural lead-in to additional content.
                 This content is a little bit longer.
@@ -110,18 +159,24 @@
             </b-card>
           </b-col>
         </b-row>
+        <div class="selengkapnya text-center pt-4">
+          <router-link tag="a" to="/">Lihat Selengkapnya  -></router-link>
+        </div>
       </b-container>
     </section>
+
     <section class="faq">
       <!-- arahan ke faq -->
       <b-container class="py-5">
         <b-row>
-          <b-col>
+          <b-col class="my-auto">
             <h2>Ada Pertanyaan ?</h2>
             <p>Cari tahu pernyataan yang sering muncul mengenai Covid-19</p>
             <b-button to="/" class="btn-grad">Lihat FAQ</b-button>
           </b-col>
-          <b-col></b-col>
+          <b-col class="text-center d-none d-sm-block">
+            <img src="@/assets/landing/questions.svg" alt="" width="90%">
+          </b-col>
         </b-row>
       </b-container>
     </section>
@@ -173,14 +228,13 @@ export default {
       };
       axios(options)
         .then(response => {
-          console.log('global',response.data.Global)
+          console.log("global", response.data.Global);
           this.global = response.data.Global;
-          
         })
         .catch(e => {
           console.log(e);
         });
-    },
+    }
   }
 };
 </script>
@@ -189,20 +243,52 @@ export default {
 #lan {
   background: rgb(234, 246, 250);
 }
-.group-card .card-style {
-  border-radius: 20px;
-}
+
 .intro {
-  padding: 9rem 0 6rem;
-  background: #56ccf2;
+  padding: 4rem 0 6rem;
+  background: white;
+  /* background: #56ccf2;
   background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
   background: linear-gradient(to right, #2f80ed, #56ccf2);
-  color: white;
+  color: white; */
 }
+.intro h1 {
+  font-weight: 700;
+}
+.intro h1 span {
+  color: rgb(174, 174, 252);
+}
+
+.data h2 {
+  font-weight: 700;
+}
+.data h4 {
+  font-weight: 600;
+}
+.data h5 {
+  color: #2f80ed;
+}
+.data p {
+  font-weight: 500;
+}
+
 .jelajah-data {
   background: #56ccf2;
   background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
   background: linear-gradient(to right, #2f80ed, #56ccf2);
+}
+.jelajah-data h2 {
+  font-weight: 700;
+}
+.jelajah-data h3 {
+  font-weight: 600;
+}
+.jelajah-data h5 {
+  color: #2f80ed;
+  font-weight: 600;
+}
+.group-card .card-style {
+  border-radius: 20px;
 }
 .btn-grad {
   background-image: linear-gradient(
@@ -227,6 +313,17 @@ export default {
   color: #fff;
   text-decoration: none;
 }
+.cegah-covid h2{
+  font-weight: 700;
+}
+.cegah-covid .selengkapnya a {
+  color: #2f80ed;
+  font-weight: 500;
+}
+.cegah-covid .selengkapnya a:hover {
+  color: #56ccf2;
+  text-decoration: none;
+}
 .compt {
   height: 14rem;
 }
@@ -234,10 +331,11 @@ export default {
   border-radius: 20px;
 }
 .faq {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: #56ccf2;
   background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
   background: linear-gradient(to right, #2f80ed, #56ccf2);
   color: white;
 }
+/* #B7B6FB */
 </style>

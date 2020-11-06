@@ -43,7 +43,12 @@
 
 <script>
 export default {
-  name: "navbar"
+  name: "navbar",
+  methods: {
+    onActive: function() {
+
+    }
+  }
 };
 </script>
 
@@ -70,16 +75,17 @@ export default {
   ); */
   /* box-shadow: 0 1px 6px rgb(78, 78, 78); */
 }
+
 @media (min-width: 768px) {
   .navlink {
     color: rgb(77, 77, 77);
     font-size: 11pt;
   }
   .navlink:hover {
-    /* color: rgb(184, 184, 184); */
+    color: #2f80ed;
     padding-bottom: 8px;
     /* display: block; */
-    border-bottom: 3px solid #505050;
+    border-bottom: 3px solid #2f80ed;
   }
   
 }
