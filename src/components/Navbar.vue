@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="md" variant="faded" type="light" sticky class="navbar">
+    <b-navbar toggleable="md" variant="faded" type="light" fixed="top" class="navbar">
       <b-container>
         <b-navbar-brand class="brand" to="/">CovInf</b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -56,6 +56,7 @@ export default {
   font-size: 11pt;
 }
 .navbar {
+  background: #ffffff;
   /* background: #56ccf2;
   background: -webkit-linear-gradient(
     to right,
@@ -66,19 +67,19 @@ export default {
     to right,
     #2f80ed,
     #56ccf2
-  );  */
+  ); */
   /* box-shadow: 0 1px 6px rgb(78, 78, 78); */
 }
 @media (min-width: 768px) {
   .navlink {
-    color: black;
+    color: rgb(77, 77, 77);
     font-size: 11pt;
   }
   .navlink:hover {
     /* color: rgb(184, 184, 184); */
     padding-bottom: 8px;
     /* display: block; */
-    border-bottom: 3px solid #2f80ed;
+    border-bottom: 3px solid #505050;
   }
   
 }
