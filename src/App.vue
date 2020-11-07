@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <navbar />
-    <router-view />
+    <div class="scroll">
+      <router-view />
+    </div>
+
     <foot />
   </div>
 </template>
@@ -15,7 +18,8 @@ export default {
   components: {
     Navbar,
     Foot
-  }
+  },
+  
 };
 </script>
 
@@ -23,7 +27,18 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
 }
 
+.scroll {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  /* width: 0px; 
+  background: transparent; */
+  display: none;
+}
 </style>

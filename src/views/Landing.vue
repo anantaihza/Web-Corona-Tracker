@@ -30,15 +30,15 @@
               <b-row>
                 <b-col cols="6" sm="4" class="py-1">
                   <p class="my-auto">Positif</p>
-                  <h5>{{ global.TotalConfirmed }}</h5>
+                  <h5>{{ global.TotalConfirmed | numFor }}</h5>
                 </b-col>
                 <b-col cols="6" sm="4" class="py-1">
                   <p class="my-auto">Sembuh</p>
-                  <h5>{{ global.TotalRecovered }}</h5>
+                  <h5>{{ global.TotalRecovered | numFor }}</h5>
                 </b-col>
                 <b-col cols="6" sm="4" class="py-1">
                   <p class="my-auto">Meninggal</p>
-                  <h5>{{ global.TotalDeaths }}</h5>
+                  <h5>{{ global.TotalDeaths | numFor }}</h5>
                 </b-col>
               </b-row>
             </b-container>
@@ -49,19 +49,19 @@
               <b-row>
                 <b-col cols="6" sm="3" class="py-1">
                   <p class="my-auto">Positif</p>
-                  <h5>{{ total.positif }}</h5>
+                  <h5>{{ total.positif | numFor }}</h5>
                 </b-col>
                 <b-col cols="6" sm="3" class="py-1">
                   <p class="my-auto">Dirawat</p>
-                  <h5>{{ total.dirawat }}</h5>
+                  <h5>{{ total.dirawat | numFor }}</h5>
                 </b-col>
                 <b-col cols="6" sm="3" class="py-1">
                   <p class="my-auto">Sembuh</p>
-                  <h5>{{ total.sembuh }}</h5>
+                  <h5>{{ total.sembuh | numFor }}</h5>
                 </b-col>
                 <b-col cols="6" sm="3" class="py-1">
                   <p class="my-auto">Meninggal</p>
-                  <h5>{{ total.meninggal }}</h5>
+                  <h5>{{ total.meninggal | numFor }}</h5>
                 </b-col>
               </b-row>
             </b-container>
@@ -86,7 +86,7 @@
                     <img src="@/assets/landing/dataindo.svg" alt width="70%" />
                   </div>
                   <br />
-                  <b-button to="/data-indonesia" class="btn-grad">Lihat</b-button>
+                  <b-button to="/data-indonesia" class="btn-grad mt-4">Lihat</b-button>
                 </b-container>
               </b-card-text>
             </b-card>
@@ -160,7 +160,7 @@
           </b-col>
         </b-row>
         <div class="selengkapnya text-center pt-4">
-          <router-link tag="a" to="/">Lihat Selengkapnya  -></router-link>
+          <router-link tag="a" to="/pencegahan">Lihat Selengkapnya  -></router-link>
         </div>
       </b-container>
     </section>
@@ -172,7 +172,7 @@
           <b-col class="my-auto">
             <h2>Ada Pertanyaan ?</h2>
             <p>Cari tahu pernyataan yang sering muncul mengenai Covid-19</p>
-            <b-button to="/" class="btn-grad">Lihat FAQ</b-button>
+            <b-button to="/faq" class="btn-grad mt-4">Lihat FAQ</b-button>
           </b-col>
           <b-col class="text-center d-none d-sm-block">
             <img src="@/assets/landing/questions.svg" alt="" width="90%">
@@ -235,13 +235,23 @@ export default {
           console.log(e);
         });
     }
+  },
+  filters: {
+    numFor: function(value) {
+      if (!value) {
+        return '0'
+      }
+      let intPart = Number(value).toFixed(0)
+      let intPartFormat = intPart.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
+      return intPartFormat
+    }
   }
 };
 </script>
 
 <style scoped>
 #lan {
-  background: rgb(234, 246, 250);
+  background: rgb(235, 246, 250);
 }
 
 .intro {
@@ -336,6 +346,9 @@ export default {
   background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
   background: linear-gradient(to right, #2f80ed, #56ccf2);
   color: white;
+}
+.faq h2 {
+  font-weight: 700;
 }
 /* #B7B6FB */
 </style>

@@ -24,10 +24,10 @@
               <template #button-content>
                 <span class="navlink">Layanan</span>
               </template>
-              <b-dropdown-item href="#">
+              <b-dropdown-item to="/pencegahan">
                 <span class="droplink">Pencegahan</span>
               </b-dropdown-item>
-              <b-dropdown-item href="#">
+              <b-dropdown-item to="/faq">
                 <span class="droplink">FAQ</span>
               </b-dropdown-item>
             </b-nav-item-dropdown>
