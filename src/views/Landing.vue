@@ -77,7 +77,7 @@
         <h2 class="text-center pb-3" style="color: white;">Jelajahi Data Covid-19 Teraktual</h2>
         <div class="conten py-5">
           <b-card-group deck class="group-card">
-            <b-card border-variant="white" class="card-style">
+            <b-card class="card-style">
               <b-card-text>
                 <b-container class="py-2">
                   <h5>Data</h5>
@@ -90,7 +90,7 @@
                 </b-container>
               </b-card-text>
             </b-card>
-            <b-card border-variant="white" class="card-style">
+            <b-card class="card-style">
               <b-card-text>
                 <b-container class="py-2">
                   <h5>Data</h5>
@@ -115,7 +115,7 @@
         <br />
         <b-row>
           <b-col lg="4" class="group-card pt-4">
-            <b-card class="compt" border-variant="white">
+            <b-card class="compt">
               <b-card-title>
                 Title
               </b-card-title>
@@ -126,7 +126,7 @@
             </b-card>
           </b-col>
           <b-col lg="8" class="group-card pt-4">
-            <b-card class="compt" border-variant="white">
+            <b-card class="compt">
               <b-card-title>
                 Title
               </b-card-title>
@@ -137,7 +137,7 @@
             </b-card>
           </b-col>
           <b-col lg="8" class="group-card pt-4">
-            <b-card class="compt"  border-variant="white">
+            <b-card class="compt" >
               <b-card-title>
                 Title
               </b-card-title>
@@ -148,7 +148,7 @@
             </b-card>
           </b-col>
           <b-col lg="4" class="group-card pt-4">
-            <b-card class="compt" border-variant="white">
+            <b-card class="compt">
               <b-card-title>
                 Title
               </b-card-title>
@@ -297,8 +297,9 @@ export default {
   color: #2f80ed;
   font-weight: 600;
 }
-.group-card .card-style {
+.card-style {
   border-radius: 20px;
+  border: none;
 }
 .btn-grad {
   background-image: linear-gradient(
@@ -336,10 +337,12 @@ export default {
 }
 .compt {
   height: 14rem;
-}
-.group-card .compt {
   border-radius: 20px;
+  border: none;
 }
+/* .group-card .compt {
+  
+} */
 .faq {
   padding: 4rem 0;
   background: #56ccf2;

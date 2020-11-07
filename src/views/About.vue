@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped>
-  #lan {
-    margin-top: 15px;
+  #about {
+    margin-top: 100px;
   }
 </style>

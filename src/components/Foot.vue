@@ -34,9 +34,9 @@ export default {
 </script>
 
 <style scoped>
-.footers {
+/* .footers {
   border-top: 0.2px solid #dfdfdf;
-}
+} */
 .link {
   text-decoration: none;
   color: black;
