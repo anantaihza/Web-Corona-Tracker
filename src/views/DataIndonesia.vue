@@ -70,30 +70,30 @@
           </b-card-title>
           <b-card-text>
             <p class="text-center danger">Positif : +{{ penambahan.positif | numFor }} orang</p>
-            <div class="table-style text-center">
+            <div class="table-style">
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Kategori</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">%</th>
+                    <th scope="col">KATEGORI</th>
+                    <th scope="col" class="text-center">TOTAL</th>
+                    <th scope="col" class="text-center">%</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="safe">
-                    <td>Sembuh</td>
-                    <td>+{{ penambahan.sembuh | numFor }}</td>
-                    <td>{{ percentagePenambahan(penambahan.sembuh) }}</td>
+                  <tr class="table-g">
+                    <td class="head">Sembuh</td>
+                    <td class="text-center"><p>{{ penambahan.sembuh | numFor }}</p></td>
+                    <td class="text-center"><p>{{ percentagePenambahan(penambahan.sembuh) }}</p></td>
                   </tr>
-                  <tr class="danger">
-                    <td>Dirawat</td>
-                    <td>+{{ penambahan.dirawat | numFor }}</td>
-                    <td>{{ percentagePenambahan(penambahan.dirawat) }}</td>
+                  <tr class="table-r">
+                    <td class="head">Dirawat</td>
+                    <td class="text-center"><p>{{ penambahan.dirawat | numFor }}</p></td>
+                    <td class="text-center"><p>{{ percentagePenambahan(penambahan.dirawat) }}</p></td>
                   </tr>
-                  <tr class="danger">
-                    <td>Meninggal</td>
-                    <td>+{{ penambahan.meninggal | numFor }}</td>
-                    <td>{{ percentagePenambahan(penambahan.meninggal) }}</td>
+                  <tr class="table-r">
+                    <td class="head">Meninggal</td>
+                    <td class="text-center"><p>{{ penambahan.meninggal | numFor }}</p></td>
+                    <td class="text-center"><p>{{ percentagePenambahan(penambahan.meninggal) }}</p></td>
                   </tr>
                   
                 </tbody>
@@ -225,6 +225,7 @@ h1 {
 .safe {
   color: rgb(29, 216, 29);
 }
+
 .table-style {
   padding: 3% 2%;
   margin: 0 8%;
@@ -241,7 +242,16 @@ th {
   font-size: 12pt;
   font-weight: 600;
 }
-/* td {
+.head {
+  font-weight: 600;
+}
+td {
   font-size: 11pt;
-} */
+}
+.table-g p {
+  color: rgb(29, 216, 29);  
+}
+.table-r p {
+  color: rgb(252, 82, 82);
+}
 </style>
