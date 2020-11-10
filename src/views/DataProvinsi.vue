@@ -11,7 +11,7 @@
       <b-container>
         <h2 class="pt-3 text-center">Update Terbaru COVID-19 di Provinsi</h2>
         <div class="srch">
-          <b-form-input class="search-field" placeholder="Temukan Provinsi Anda" v-model="search" />
+          <b-form-input class="search-field" placeholder="Temukan Provinsi" v-model="search" />
         </div>
         <div>
           <b-card class="bg-prov">
