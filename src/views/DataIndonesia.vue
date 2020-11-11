@@ -69,7 +69,7 @@
             <h2 class="pb-2 text-center">Penambahan Korban COVID-19</h2>
           </b-card-title>
           <b-card-text>
-            <p class="text-center danger">Positif : +{{ penambahan.positif | numFor }} orang</p>
+            <p class="text-center danger">Positif : {{ penambahan.positif | numFor }} orang</p>
             <div class="table-style">
               <table class="table">
                 <thead>
