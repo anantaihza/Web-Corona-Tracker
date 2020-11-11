@@ -11,7 +11,7 @@
             </b-nav-item>
             <b-nav-item-dropdown left class="ml-2">
               <template #button-content>
-                <span class="navlink">Data</span>
+                <span class="navlink">Statistik</span>
               </template>
               <b-dropdown-item to="/data-indonesia">
                 <span class="droplink">Data Indonesia</span>
@@ -24,8 +24,11 @@
               <template #button-content>
                 <span class="navlink">Layanan</span>
               </template>
-              <b-dropdown-item to="/pencegahan">
-                <span class="droplink">Pencegahan</span>
+              <b-dropdown-item to="/protokol">
+                <span class="droplink">Protokol Kesehatan</span>
+              </b-dropdown-item>
+              <b-dropdown-item to="/kontak">
+                <span class="droplink">Kontak</span>
               </b-dropdown-item>
               <b-dropdown-item to="/faq">
                 <span class="droplink">FAQ</span>

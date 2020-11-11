@@ -4,7 +4,7 @@ import Landing from '../views/Landing.vue'
 import About from '../views/About.vue'
 import DataIndonesia from '../views/DataIndonesia.vue'
 import DataProvinsi from '../views/DataProvinsi.vue'
-import Pencegahan from '../views/Pencegahan.vue'
+import Protokol from '../views/Protokol.vue'
 import Faq from '../views/Faq.vue'
 
 Vue.use(VueRouter)
@@ -31,9 +31,9 @@ const routes = [
     component: DataProvinsi
   },
   {
-    path: '/pencegahan',
-    name: 'Pencegahan',
-    component: Pencegahan
+    path: '/protokol',
+    name: 'Protokol',
+    component: Protokol
   },
   {
     path: '/faq',

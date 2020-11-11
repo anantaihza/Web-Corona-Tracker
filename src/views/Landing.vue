@@ -4,8 +4,13 @@
       <b-container>
         <b-row>
           <b-col md="5" class="px-4 py-5 m-auto">
-            <h1>INDONESIA TANGGAP <span>COVID-19</span></h1>
-            <p class="pt-3">Wujudkan Indonesia Sehat, Aman dan Produktif. Laporkan dan Konsultasikan ke Tim Kesehatan Jika Anda atau Kerabat Dekat Anda Terindikasi Gejala Covid-19.</p>
+            <h1>
+              INDONESIA TANGGAP
+              <span>COVID-19</span>
+            </h1>
+            <p
+              class="pt-3"
+            >Wujudkan Indonesia Sehat, Aman dan Produktif. Laporkan dan Konsultasikan ke Tim Kesehatan Jika Anda atau Kerabat Dekat Anda Terindikasi Gejala Covid-19.</p>
           </b-col>
           <b-col md="7" class="p-5 text-center d-none d-sm-block">
             <img src="@/assets/landing/intro.svg" alt width="130%" />
@@ -42,7 +47,7 @@
                 </b-col>
               </b-row>
             </b-container>
-            <br>
+            <br />
             <b-container class="mt-3">
               <h4>Indonesia</h4>
               <hr class="mt-1 mb-2" />
@@ -65,7 +70,6 @@
                 </b-col>
               </b-row>
             </b-container>
-
           </b-col>
         </b-row>
       </b-container>
@@ -111,56 +115,45 @@
     <section class="cegah-covid py-5">
       <!-- tulis beberapa pencegahan nya -->
       <b-container>
-        <h2 class="text-center pb-3">Protocol Kesehatan yang Harus Dipatuhi</h2>
+        <h2 class="text-center pb-3">Tips - tips Pencegahan penyebaran COVID-19</h2>
         <br />
         <b-row>
           <b-col lg="4" class="group-card pt-4">
             <b-card class="compt">
-              <b-card-title>
-                Title
-              </b-card-title>
-              <b-card-text>
-                This is a wider card with supporting text below as a natural lead-in to additional content.
-                This content is a little bit longer.
-              </b-card-text>
+              <b-container class="pt-4">
+                <h4 class="pb-3">Social Distancing</h4>
+                <p>Jangan keluar rumah jika tidak ada kebutuhan yang mendesak</p>
+              </b-container>
             </b-card>
           </b-col>
           <b-col lg="8" class="group-card pt-4">
             <b-card class="compt">
-              <b-card-title>
-                Title
-              </b-card-title>
-              <b-card-text>
-                This is a wider card with supporting text below as a natural lead-in to additional content.
-                This content is a little bit longer.
-              </b-card-text>
+              <b-container class="pt-4">
+                <h4 class="pb-3">Cuci Tangan</h4>
+                <p>Cuci tangan  secara rutin. Gunakan sabun atau cairan pembersih tangan berbahan alkohol pada saat mencuci tangan.</p>
+              </b-container>
             </b-card>
           </b-col>
           <b-col lg="8" class="group-card pt-4">
-            <b-card class="compt" >
-              <b-card-title>
-                Title
-              </b-card-title>
-              <b-card-text>
-                This is a wider card with supporting text below as a natural lead-in to additional content.
-                This content is a little bit longer.
-              </b-card-text>
+            <b-card class="compt">
+              
+              <b-container class="pt-4">
+                <h4 class="pb-3">Mengenakan Masker</h4>
+                <p>Selalu kenakan masker pada saat diluar rumah agar terhindar dari virus dan polusi udara.</p>
+              </b-container>
             </b-card>
           </b-col>
           <b-col lg="4" class="group-card pt-4">
             <b-card class="compt">
-              <b-card-title>
-                Title
-              </b-card-title>
-              <b-card-text>
-                This is a wider card with supporting text below as a natural lead-in to additional content.
-                This content is a little bit longer.
-              </b-card-text>
+              <b-container class="pt-4">
+                <h4 class="pb-3">Bantuan Medis</h4>
+                <p>Jika anda merasa terkena gejala berat, segera cari bantuan medis.</p>
+              </b-container>
             </b-card>
           </b-col>
         </b-row>
         <div class="selengkapnya text-center pt-4">
-          <router-link tag="a" to="/pencegahan">Lihat Selengkapnya  -></router-link>
+          <router-link tag="a" to="/protokol">Lihat Selengkapnya -></router-link>
         </div>
       </b-container>
     </section>
@@ -175,7 +168,7 @@
             <b-button to="/faq" class="btn-grad mt-4">Lihat FAQ</b-button>
           </b-col>
           <b-col class="text-center d-none d-sm-block">
-            <img src="@/assets/landing/questions.svg" alt="" width="90%">
+            <img src="@/assets/landing/questions.svg" alt width="90%" />
           </b-col>
         </b-row>
       </b-container>
@@ -239,11 +232,13 @@ export default {
   filters: {
     numFor: function(value) {
       if (!value) {
-        return '0'
+        return "0";
       }
-      let intPart = Number(value).toFixed(0)
-      let intPartFormat = intPart.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
-      return intPartFormat
+      let intPart = Number(value).toFixed(0);
+      let intPartFormat = intPart
+        .toString()
+        .replace(/(\d)(?=(?:\d{3})+$)/g, "$1,");
+      return intPartFormat;
     }
   }
 };
@@ -324,7 +319,7 @@ export default {
   color: #fff;
   text-decoration: none;
 }
-.cegah-covid h2{
+.cegah-covid h2 {
   font-weight: 700;
 }
 .cegah-covid .selengkapnya a {
@@ -353,5 +348,6 @@ export default {
 .faq h2 {
   font-weight: 700;
 }
+
 /* #B7B6FB */
 </style>
