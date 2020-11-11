@@ -7,6 +7,11 @@
         <p class="pt-2 pb-2">Website Covinf</p>
       </b-container>
     </section>   
+    <section class="team py-5">
+      <b-continer>
+        <h2 class="text-center">Anggota</h2>
+      </b-continer>
+    </section>
   </div>
 </template>
 
@@ -29,7 +34,8 @@ export default {
   background: linear-gradient(to right, #2f80ed, #56ccf2);
   color: white;
 }
-.intro h1 {
+.intro h1,
+.team h2 {
   font-weight: 700;
 }
 .intro p {
