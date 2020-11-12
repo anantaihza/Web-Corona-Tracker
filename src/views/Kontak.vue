@@ -23,7 +23,7 @@
         </b-row>
       </b-container>
     </section>
-    
+
     <section class="daftar">
       <b-container>
         <div class="srch">
@@ -34,22 +34,20 @@
           />
         </div>
         <b-row>
-          <div v-for="data in filteredData" :key="data.name">
-            <b-col>
-              <b-card-group deck>
-                <b-card class="card my-2 py-2 px-2">
-                  <h5>{{ data.name }}</h5>
-                  <p>{{ data.address }}</p>
-                  <hr>
-                  <p>
-                    {{ data.region }}
-                    <br />
-                   <span>{{ data.phone }}</span> 
-                  </p>
-                </b-card>
-              </b-card-group>
-            </b-col>
-          </div>
+          <b-col cols="12" md="6" v-for="data in filteredData" :key="data.name">
+            <b-card-group deck>
+              <b-card class="card my-2 py-2 px-2">
+                <h5 class="head">{{ data.name }}</h5>
+                <p>{{ data.address }}</p>
+                <hr />
+                <p>
+                  {{ data.region }}
+                  <br />
+                  <span>{{ data.phone }}</span>
+                </p>
+              </b-card>
+            </b-card-group>
+          </b-col>
         </b-row>
       </b-container>
     </section>
@@ -87,12 +85,12 @@ export default {
     }
   },
   computed: {
-    filteredData: function(){
-      return this.dataKontak.filter((data) => {
+    filteredData: function() {
+      return this.dataKontak.filter(data => {
         return data.region.toUpperCase().match(this.search.toUpperCase());
-      })
+      });
     }
-  },
+  }
 };
 </script>
 
@@ -127,7 +125,6 @@ h2 {
   font-size: 11pt;
 }
 .card {
-  width: 33rem;
   height: 14rem;
   border: none;
   border-radius: 20px;
@@ -135,7 +132,8 @@ h2 {
 .card p {
   font-size: 11pt;
 }
-h5, .card p span {
+.head,
+.card p span {
   font-weight: 600;
 }
 </style>
