@@ -125,7 +125,7 @@ h2 {
   font-size: 11pt;
 }
 .card {
-  height: 14rem;
+  height: 18rem;
   border: none;
   border-radius: 20px;
 }
