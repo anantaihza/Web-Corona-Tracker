@@ -7,15 +7,15 @@
         <p class="pt-2 pb-2">Cari Pertanyaan yang Sering Ditanyakan tentang COVID-19</p>
       </b-container>
     </section>
+
     <section class="answer py-5">
       <b-container>
-        <h2 class="pt-3 text-center">Informasi Dasar COVID-19</h2>
+        <h2 class="pt-3 pb-2 text-center">Informasi Dasar COVID-19</h2>
+        <p class="text-center">Tekan pertanyaan untuk mendapatkan jawaban</p>
         <div>
           <b-card class="mt-5 card-style">
             <b-container>
-
               <div class="accordion py-3" role="tablist">
-               
                 <b-card no-body class="mb-1 card-style">
                   <b-card-header header-tag="header" class="head p-1" role="tab">
                     <b-button block v-b-toggle.accordion-1 class="btn-grad text-left">Apa itu COVID-19 ?</b-button>
@@ -134,7 +134,7 @@
                   </b-collapse>
                 </b-card>
 
-                <b-card no-body class="mb-1 card-style">
+                <!-- <b-card no-body class="mb-1 card-style">
                   <b-card-header header-tag="header" class="head p-1" role="tab">
                     <b-button block v-b-toggle.accordion-8 class="btn-grad text-left">Bagaimana dengan rapid test ?</b-button>
                   </b-card-header>
@@ -145,7 +145,7 @@
                       </b-card-text>
                     </b-card-body>
                   </b-collapse>
-                </b-card>
+                </b-card> -->
 
                 <b-card no-body class="mb-1 card-style">
                   <b-card-header header-tag="header" class="head p-1" role="tab">

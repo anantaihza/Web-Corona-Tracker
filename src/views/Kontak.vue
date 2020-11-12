@@ -9,6 +9,7 @@
         >Informasi nomor dan alamat rumah sakit yang menjadi rujukan pemeriksaan gejala Covid-19</p>
       </b-container>
     </section>
+
     <section class="rujukan py-5">
       <b-container class="py-3">
         <b-row>
@@ -22,12 +23,13 @@
         </b-row>
       </b-container>
     </section>
+    
     <section class="daftar">
       <b-container>
         <div class="srch">
           <b-form-input
             class="search-field"
-            placeholder="Cari Provinsi anda untuk melihat Rumah Sakit"
+            placeholder="Cari Provinsi / Kota anda"
             v-model="search"
           />
         </div>
@@ -78,7 +80,6 @@ export default {
       axios(options)
         .then(response => {
           this.dataKontak = response.data;
-          console.log("kontak", this.dataKontak);
         })
         .catch(e => {
           console.log(e);
@@ -88,8 +89,7 @@ export default {
   computed: {
     filteredData: function(){
       return this.dataKontak.filter((data) => {
-
-        return data.province.toUpperCase().match(this.search.toUpperCase());
+        return data.region.toUpperCase().match(this.search.toUpperCase());
       })
     }
   },

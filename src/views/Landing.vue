@@ -18,9 +18,8 @@
         </b-row>
       </b-container>
     </section>
-
+    
     <section class="data py-5">
-      <!-- data indonesia -->
       <b-container>
         <h2 class="text-center pb-3">Corona Virus Overview</h2>
         <br />
@@ -76,7 +75,6 @@
     </section>
 
     <section class="jelajah-data py-5">
-      <!-- yang card  -->
       <b-container>
         <h2 class="text-center pb-3" style="color: white;">Jelajahi Data Covid-19 Teraktual</h2>
         <div class="conten py-5">
@@ -113,7 +111,6 @@
     </section>
 
     <section class="cegah-covid py-5">
-      <!-- tulis beberapa pencegahan nya -->
       <b-container>
         <h2 class="text-center pb-3">Tips - tips Pencegahan penyebaran COVID-19</h2>
         <br />
@@ -130,13 +127,12 @@
             <b-card class="compt">
               <b-container class="pt-4">
                 <h4 class="pb-3">Cuci Tangan</h4>
-                <p>Cuci tangan  secara rutin. Gunakan sabun atau cairan pembersih tangan berbahan alkohol pada saat mencuci tangan.</p>
+                <p>Cuci tangan secara rutin. Gunakan sabun atau cairan pembersih tangan berbahan alkohol pada saat mencuci tangan.</p>
               </b-container>
             </b-card>
           </b-col>
           <b-col lg="8" class="group-card pt-4">
             <b-card class="compt">
-              
               <b-container class="pt-4">
                 <h4 class="pb-3">Mengenakan Masker</h4>
                 <p>Selalu kenakan masker pada saat diluar rumah agar terhindar dari virus dan polusi udara.</p>
@@ -173,6 +169,7 @@
         </b-row>
       </b-container>
     </section>
+    <br><br>
   </div>
 </template>
 
@@ -183,10 +180,10 @@ export default {
   name: "Landing",
   data() {
     return {
-      dataInd: [],
       total: [],
-      penambahan: [],
-      global: []
+      global: [],
+      dataInd: [],
+      penambahan: []
     };
   },
   created() {
@@ -204,8 +201,6 @@ export default {
           this.dataInd = response.data;
           this.total = response.data.total;
           this.penambahan = response.data.penambahan;
-          console.log("total", this.total);
-          console.log("penambahan", this.penambahan);
         })
         .catch(e => {
           console.log(e);
@@ -221,7 +216,6 @@ export default {
       };
       axios(options)
         .then(response => {
-          console.log("global", response.data.Global);
           this.global = response.data.Global;
         })
         .catch(e => {
@@ -248,14 +242,9 @@ export default {
 #lan {
   background: rgb(235, 246, 250);
 }
-
 .intro {
   padding: 4rem 0 6rem;
   background: white;
-  /* background: #56ccf2;
-  background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
-  background: linear-gradient(to right, #2f80ed, #56ccf2);
-  color: white; */
 }
 .intro h1 {
   font-weight: 700;
@@ -263,7 +252,6 @@ export default {
 .intro h1 span {
   color: rgb(174, 174, 252);
 }
-
 .data h2 {
   font-weight: 700;
 }
@@ -276,7 +264,6 @@ export default {
 .data p {
   font-weight: 500;
 }
-
 .jelajah-data {
   background: #56ccf2;
   background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
@@ -322,6 +309,10 @@ export default {
 .cegah-covid h2 {
   font-weight: 700;
 }
+.cegah-covid h4 {
+  font-weight: 600;
+}
+
 .cegah-covid .selengkapnya a {
   color: #2f80ed;
   font-weight: 500;
@@ -335,9 +326,7 @@ export default {
   border-radius: 20px;
   border: none;
 }
-/* .group-card .compt {
-  
-} */
+
 .faq {
   padding: 4rem 0;
   background: #56ccf2;

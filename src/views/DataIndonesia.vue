@@ -113,8 +113,8 @@ export default {
   name: "DataIndonesia",
   data() {
     return {
-      dataInd: [],
       total: [],
+      dataInd: [],
       penambahan: []
     };
   },
@@ -132,9 +132,6 @@ export default {
           this.dataInd = response.data;
           this.total = response.data.total;
           this.penambahan = response.data.penambahan;
-
-          console.log("total :", this.total);
-          console.log("penambahan :", this.penambahan);
         })
         .catch(e => {
           console.log(e);
@@ -146,7 +143,6 @@ export default {
       }
       let jml = Number(this.total.positif);
       let percent = ((Number(value) / jml) * 100).toFixed(2);
-
       return percent + " %";
     },
     percentagePenambahan(value) {
@@ -155,7 +151,6 @@ export default {
       }
       let jml = Number(this.penambahan.positif);
       let percent = ((Number(value) / jml) * 100).toFixed(2);
-
       return percent + " %";
     }
   },
@@ -225,7 +220,6 @@ h1 {
 .safe {
   color: rgb(29, 216, 29);
 }
-
 .table-style {
   padding: 3% 2%;
   margin: 0 8%;

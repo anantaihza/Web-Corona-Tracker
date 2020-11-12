@@ -4,7 +4,6 @@
     <div class="scroll">
       <router-view />
     </div>
-
     <foot />
   </div>
 </template>

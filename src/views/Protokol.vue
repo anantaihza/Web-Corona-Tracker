@@ -7,6 +7,7 @@
         <p class="pt-2 pb-2">Upaya yang dapat dilakukan pada saat masa pandemi.</p>
       </b-container>
     </section>
+
     <section class="tips py-5">
       <b-container>
         <h2 class="text-center pb-2">Tips Pencegahan Penyebaran COVID-19</h2>
@@ -53,6 +54,7 @@
         </b-row>
       </b-container>
     </section>
+
     <section class="self-care py-5">
       <b-container>
         <h2 class="text-center pb-5">Perawatan Diri</h2>
@@ -69,6 +71,7 @@
         </b-row>
       </b-container>
     </section>
+    
     <section class="produktif py-5">
       <b-container>
         <h2 class="text-center pb-5">Hal Produktif yang Dapat Dilakukan</h2>

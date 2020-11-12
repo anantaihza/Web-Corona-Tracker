@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Landing from '../views/Landing.vue'
-import About from '../views/About.vue'
 import DataIndonesia from '../views/DataIndonesia.vue'
 import DataProvinsi from '../views/DataProvinsi.vue'
 import Protokol from '../views/Protokol.vue'
@@ -15,11 +14,6 @@ const routes = [
     path: '/',
     name: 'Landing',
     component: Landing
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
   },
   {
     path: '/data-indonesia',

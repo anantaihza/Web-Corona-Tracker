@@ -7,6 +7,7 @@
         <p class="pt-2 pb-2">Data Pemantauan Kasus Covid-19 di Provinsi Indonesia</p>
       </b-container>
     </section>
+
     <section class="update py-5">
       <b-container>
         <h2 class="pt-3 text-center">Update Terbaru COVID-19 di Provinsi</h2>
@@ -72,22 +73,22 @@
                           <td>
                             <p class="head">{{ data.provinsi }}</p>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center danger">
                             <p>{{ data.kelompok_umur['0-5_tahun'] | numFor }}</p>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center danger">
                             <p>{{ data.kelompok_umur['6-18_tahun'] | numFor }}</p>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center danger">
                             <p>{{ data.kelompok_umur['19-30_tahun'] | numFor }}</p>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center danger">
                             <p>{{ data.kelompok_umur['31-45_tahun'] | numFor }}</p>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center danger">
                             <p>{{ data.kelompok_umur['46-59_tahun'] | numFor }}</p>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center danger">
                             <p>{{ data.kelompok_umur['≥60_tahun'] | numFor }}</p>
                           </td>
                         </tr>
@@ -111,8 +112,8 @@ export default {
   name: "DataProvinsi",
   data() {
     return {
-      dataProv: [],
-      search: ""
+      search: "",
+      dataProv: []
     };
   },
   created() {
@@ -133,7 +134,6 @@ export default {
             dataprov.push(data);
           });
           this.dataProv = dataprov;
-          console.log(this.dataProv);
         })
         .catch(e => {
           console.log(e);
