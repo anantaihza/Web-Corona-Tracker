@@ -47,11 +47,7 @@
 <script>
 export default {
   name: "navbar",
-  methods: {
-    onActive: function() {
-
-    }
-  }
+  
 };
 </script>
 
