@@ -5,7 +5,6 @@ import DataIndonesia from '../views/DataIndonesia.vue'
 import DataProvinsi from '../views/DataProvinsi.vue'
 import Protokol from '../views/Protokol.vue'
 import Faq from '../views/Faq.vue'
-import Kontak from '../views/Kontak.vue'
 
 Vue.use(VueRouter)
 
@@ -34,11 +33,6 @@ const routes = [
     path: '/faq',
     name: 'Faq',
     component: Faq
-  },
-  {
-    path: '/kontak',
-    name: 'Kontak',
-    component: Kontak
   }
 
 

@@ -123,7 +123,7 @@ export default {
     getData() {
       const options = {
         url:
-          "https://cors-anywhere.herokuapp.com/apicovid19indonesia-v2.vercel.app/api/indonesia/provinsi/more",
+          "https://apicovid19indonesia-v2.vercel.app/api/indonesia/provinsi/more",
         method: "get"
       };
       axios(options)

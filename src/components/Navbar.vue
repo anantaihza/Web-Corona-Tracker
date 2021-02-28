@@ -31,9 +31,6 @@
                 <span class="droplink">FAQ</span>
               </b-dropdown-item>
             </b-nav-item-dropdown>
-            <b-nav-item to="/kontak" class="ml-2">
-              <span class="navlink">Kontak</span>
-            </b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
